@@ -5,18 +5,12 @@
   "author": "szamanr",
   "keywords": [],
   "files": [
-    "dist",
+    "src",
     "README.md"
   ],
   "license": "MIT",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    }
-  },
+  "main": "src/index.ts",
+  "module": "src/index.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,6 +18,7 @@
     "watch": "vitest",
     "coverage": "vitest run --coverage"
   },
+  "type": "module",
   "devDependencies": {
     "@testing-library/dom": "^8.11.3",
     "@testing-library/react": "^12.1.3",
