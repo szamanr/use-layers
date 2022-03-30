@@ -5,12 +5,18 @@
   "author": "szamanr",
   "keywords": [],
   "files": [
-    "src",
-    "README.md"
+    "dist",
+    "src"
   ],
   "license": "MIT",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
