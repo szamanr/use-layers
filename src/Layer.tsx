@@ -30,6 +30,7 @@ export const Layer = ({ children, index }: Props): JSX.Element => {
   }, []);
 
   return React.cloneElement(children, {
+    "data-z-index": zIndex,
     id: `layer-${layerId.current}`,
     style: { zIndex },
   });
