@@ -17,7 +17,7 @@ export default defineConfig({
   resolve: process.env.USE_SOURCE
     ? {
       alias: {
-        'use-layers': path.resolve(__dirname, '../src/index.ts'),
+        'use-layers': path.resolve(__dirname, '../../src/index.ts'),
       },
     }
     : {},

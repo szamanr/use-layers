@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Layer } from "../src/index";
+import { Layer } from "../../src";
 
-export const LayersTest = (): JSX.Element => {
+export const LayerExample = (): JSX.Element => {
   const [, refresh] = useState(false);
   const [shown, setShown] = useState([false, false, false, false]);
   const reset = (_, state = false) => {

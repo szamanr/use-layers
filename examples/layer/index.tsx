@@ -1,11 +1,11 @@
-import { LayersTest } from "./LayersTest";
+import { LayerExample } from "./LayerExample";
 import React from "react";
 import { render } from "react-dom";
-import { Layers } from "../src/index";
+import { Layers } from "../../src";
 
 render(
   <Layers options={{ baseIndex: 1000 }}>
-    <LayersTest />
+    <LayerExample />
   </Layers>,
   document.getElementById("root")
 );
