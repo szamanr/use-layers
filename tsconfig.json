@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "declaration": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "moduleResolution": "node",
+    "noEmit": false,
     "target": "es2020",
     "types": [
       "vite/client",
