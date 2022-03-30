@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layer } from "index";
+import { Layer } from "../src/index";
 
 export const LayersTest = (): JSX.Element => {
   const [shown, setShown] = useState([false, false, false, false]);

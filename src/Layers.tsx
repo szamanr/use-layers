@@ -1,6 +1,7 @@
 import { find, last, remove as _remove } from "lodash";
 import React, { useRef } from "react";
-import { Layer, LayersContext } from "LayersContext";
+import { Layer } from "./index";
+import { LayersContext } from "./LayersContext";
 
 const DEFAULT_STEP = 10;
 const DEFAULT_BASE_Z_INDEX = 0;
