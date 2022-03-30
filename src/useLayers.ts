@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { LayersContext } from "./LayersContext";
+import { LayersContext } from "LayersContext";
 
 /**
  * TODO: wip - unmounting doesn't work
