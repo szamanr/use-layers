@@ -1,6 +1,6 @@
 {
   "name": "use-layers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "imagine there's no z-index, it's easy if you try use-layers",
   "author": "szamanr",
   "keywords": [],
@@ -13,8 +13,8 @@
   "module": "dist/index.es.js",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "repository": {
@@ -29,6 +29,7 @@
     "coverage": "vitest run --coverage"
   },
   "type": "module",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@testing-library/dom": "^8.11.3",
     "@testing-library/react": "^12.1.3",
