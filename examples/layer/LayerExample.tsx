@@ -27,9 +27,8 @@ export const LayerExample = (): JSX.Element => {
 
   // just for example purposes: make sure the displayed z-index shows immediately
   useEffect(() => {
-    refresh(prev => !prev);
+    refresh((prev) => !prev);
   }, [shown]);
-
 
   return (
     <div className="relative w-screen h-screen bg-white">
