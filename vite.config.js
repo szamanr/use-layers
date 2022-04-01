@@ -6,8 +6,17 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      fileName: (format) => `index.${format}.js`,
-      name: "index.js",
+      fileName: (format) => {
+        switch (format) {
+          case "cjs":
+            return "index.cjs";
+          case "es":
+          default:
+            return "index.js";
+        }
+      },
+      formats: ["es", "cjs"],
+      name: "use-layers",
     },
     rollupOptions: {
       // externalize deps that shouldn't be bundled
