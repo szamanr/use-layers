@@ -17,12 +17,12 @@ tbd
 - [x] Layer container component
 - [x] basic example
 - [x] types
-- [ ] useLayers hook
-- [ ] example for useLayers hook
+- [x] useLayers hook
+- [x] example for useLayers hook
 - [ ] tests
 - [ ] better layer ID
 - [ ] more advanced examples
-- [ ] ¿remove lodash dependency?
+- [x] remove lodash dependency
 - [ ] ¿replace context with observables?
 
 ## License
