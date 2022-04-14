@@ -31,11 +31,11 @@ export const LayerExample = (): JSX.Element => {
   }, [shown]);
 
   return (
-    <div className="relative w-screen h-screen bg-white">
+    <div className="relative w-screen h-screen bg-gray-600 text-gray-50">
       {shown[0] && (
         <Layer>
           <div
-            className="layer-0 absolute left-0 top-0 w-40 h-40 bg-red-100"
+            className="layer-0 absolute left-0 top-0 w-40 h-40 bg-red-800"
             onClick={() => toggle(0)}
           >
             <p>layer 0</p>
@@ -46,7 +46,7 @@ export const LayerExample = (): JSX.Element => {
       {shown[1] && (
         <Layer>
           <div
-            className="layer-1 absolute left-4 top-4 w-40 h-40 bg-red-200"
+            className="layer-1 absolute left-4 top-4 w-40 h-40 bg-red-700"
             onClick={() => toggle(1)}
           >
             <p>layer 1</p>
@@ -57,7 +57,7 @@ export const LayerExample = (): JSX.Element => {
       {shown[2] && (
         <Layer>
           <div
-            className="layer-2 absolute left-8 top-8 w-40 h-40 bg-red-300"
+            className="layer-2 absolute left-8 top-8 w-40 h-40 bg-red-600"
             onClick={() => toggle(2)}
           >
             <p>layer 2</p>
@@ -68,7 +68,7 @@ export const LayerExample = (): JSX.Element => {
       {shown[3] && (
         <Layer>
           <div
-            className="layer-3 absolute left-12 top-12 w-40 h-40 bg-red-400"
+            className="layer-3 absolute left-12 top-12 w-40 h-40 bg-red-500"
             onClick={() => toggle(3)}
           >
             <p>layer 3</p>
