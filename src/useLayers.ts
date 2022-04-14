@@ -21,6 +21,7 @@ export const useLayers = (...refs: React.RefObject<HTMLElement>[]): void => {
     refs.forEach((ref, arrayIndex) => {
       if (ref.current) {
         const zIndex = push(layerIds.current[arrayIndex]);
+        ref.current.setAttribute("data-z-index", `${zIndex}`);
         ref.current.style.zIndex = `${zIndex}`;
       } else {
         remove(layerIds.current[arrayIndex]);

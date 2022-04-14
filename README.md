@@ -20,6 +20,7 @@ tbd
 - [x] useLayers hook
 - [x] example for useLayers hook
 - [ ] tests
+- [ ] readme
 - [ ] better layer ID
 - [ ] more advanced examples
 - [x] remove lodash dependency
