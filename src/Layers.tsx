@@ -1,4 +1,3 @@
-import { find, last, remove as _remove } from "lodash";
 import React, { useRef } from "react";
 import { Layer, LayersContext } from "./LayersContext";
 
@@ -30,12 +29,13 @@ export const Layers = ({ children, options }: Props): JSX.Element => {
   };
 
   function push(layerId: number, index?: number) {
-    const found = find(layers.current, (layer) => layer.id === layerId);
+    const found = layers.current.find((layer) => layer.id === layerId);
     if (found) {
       return found.zIndex;
     }
 
-    const lastIndex = last(layers.current)?.zIndex ?? baseIndex;
+    const lastLayer = layers.current.slice(-1)[0];
+    const lastIndex = lastLayer?.zIndex ?? baseIndex;
     const layerIndex = index ?? lastIndex + step;
     layers.current.push({ id: layerId, zIndex: layerIndex });
 
@@ -43,16 +43,13 @@ export const Layers = ({ children, options }: Props): JSX.Element => {
   }
 
   function remove(layerId: number) {
-    const found = find(layers.current, (layer) => layer.id === layerId);
-    if (!found) {
-      const lastIndex = last(layers.current)?.zIndex ?? baseIndex;
-      return lastIndex + step;
+    const found = layers.current.find((layer) => layer.id === layerId);
+    if (found) {
+      layers.current = layers.current.filter((layer) => layer.id !== layerId);
     }
 
-    _remove(layers.current, (layer) => layer.id === layerId);
-
-    const lastItem = last(layers.current);
-    const lastIndex = lastItem?.zIndex ?? baseIndex;
+    const lastLayer = layers.current.slice(-1)[0];
+    const lastIndex = lastLayer?.zIndex ?? baseIndex;
     return lastIndex + step;
   }
 
