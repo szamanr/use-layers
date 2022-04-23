@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { afterEach, expect, it } from "vitest";
 import { Layer, Layers } from "./index";
 import userEvent from "@testing-library/user-event";
-import "@testing-library/jest-dom";
 
 const TestComponent = () => {
   const [showModal0, setShowModal0] = useState(false);
@@ -115,8 +114,8 @@ it("should unset the zIndex when element removed from DOM", () => {
     ["article", { name: /love sex/i }],
   ];
 
-  expect(screen.queryByRole(...elements[0])).toBeUndefined();
-  expect(screen.queryByRole(...elements[1])).toBeUndefined();
+  expect(screen.queryByRole(...elements[0])).toBeNull();
+  expect(screen.queryByRole(...elements[1])).toBeNull();
 
   userEvent.click(toggleModal0);
 
