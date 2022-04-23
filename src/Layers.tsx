@@ -28,7 +28,7 @@ export const Layers = ({ children, options }: Props): JSX.Element => {
     );
   };
 
-  function push(layerId: number, index?: number) {
+  const push = (layerId: number, customIndex?: number) => {
     const found = layers.current.find((layer) => layer.id === layerId);
     if (found) {
       return found.zIndex;
@@ -36,13 +36,13 @@ export const Layers = ({ children, options }: Props): JSX.Element => {
 
     const lastLayer = layers.current.slice(-1)[0];
     const lastIndex = lastLayer?.zIndex ?? baseIndex;
-    const layerIndex = index ?? lastIndex + step;
+    const layerIndex = customIndex ?? lastIndex + step;
     layers.current.push({ id: layerId, zIndex: layerIndex });
 
     return layerIndex;
-  }
+  };
 
-  function remove(layerId: number) {
+  const remove = (layerId: number) => {
     const found = layers.current.find((layer) => layer.id === layerId);
     if (found) {
       layers.current = layers.current.filter((layer) => layer.id !== layerId);
@@ -51,7 +51,7 @@ export const Layers = ({ children, options }: Props): JSX.Element => {
     const lastLayer = layers.current.slice(-1)[0];
     const lastIndex = lastLayer?.zIndex ?? baseIndex;
     return lastIndex + step;
-  }
+  };
 
   return (
     <LayersContext.Provider
