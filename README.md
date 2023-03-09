@@ -58,6 +58,8 @@ const MyComponent = () => (
 - [ ] better layer ID
 - [ ] more advanced examples
 - [x] remove lodash dependency
+- [ ] make framework agnostic
+- [ ] handle edge cases with stacking contests
 - [ ] ¿replace context with observables?
 
 ## License
